@@ -46,7 +46,7 @@ $mail->Encoding = "7bit";
 $mail->IsSMTP();
 
 // デバッグ
-$mail->SMTPDebug = 1;
+$mail->SMTPDebug = 2;
 
 // SMTPAuthを利用する
 $mail->SMTPAuth = true;
