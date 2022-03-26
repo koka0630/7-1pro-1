@@ -1,0 +1,70 @@
+img.myramen-img{
+   height: 140px;
+   width: 140px;
+}
+
+body{
+font-family: 'TsukuARdGothic-Regular'
+}
+
+section{
+    width : 500px;
+    font-family: 'TsukuARdGothic-Regular'
+  }
+
+  .myramens{
+    margin: 0 auto;
+    width : 900px;
+    display: flex;
+    flex-wrap: wrap; 
+    
+  }
+  a.detail-btn{
+      font-size: 10px;
+  }
+
+  div.infomation{
+      margin-left: 300px;
+      padding-left: 50px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      width: 600px;
+      background-color: cadetblue;
+  }
+
+  div.title{
+      width: 900px;
+    display: flex;
+    margin-left: 200px;
+  }
+ 
+  a.post-btn{
+      margin-top: 20px;
+      margin-left: 100px;
+      padding-left: 100px;
+  }
+
+  div.create-info{
+    margin-left: 100px;
+  }
+
+  img.kensaku-img{
+    height: 180px;
+    width: 180px;
+  }
+div.kensakukekka{
+    margin-left: 400px;
+    width : 1000px;
+}
+
+div.tuika{
+  margin-left: 300px;
+}
+
+div.ramen-syousai{
+  margin-left: 300px;
+}
+
+div.ramen-edit{
+  margin-left: 300px;
+}

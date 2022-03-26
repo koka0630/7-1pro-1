@@ -1,0 +1,14 @@
+img.friendsramen-img{
+    height: 130px;
+    width: 130px;
+}
+
+section{
+    margin: 0 auto;
+    width : 500px;
+    font-family: 'TsukuARdGothic-Regular'
+}
+
+td.store_recommends {
+    display: flex;
+}

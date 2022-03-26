@@ -1,0 +1,82 @@
+img.login-img {
+    width: 300px;
+    height: 300px;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+      }
+      
+      body {
+      font-family: 'TsukuARdGothic-Regular'
+      
+      }
+
+section{
+        margin: 0 auto;
+        width : 700px;
+      }
+      
+
+
+  img.azitama-img1{
+    width: 40px;
+    height: 40px;
+  }
+
+  img.azitama-img2{
+    width: 40px;
+    height: 40px;
+  }
+
+  #signup{
+      display: flex; 
+      margin-top: 30px;
+      margin-left: 40px;
+  }
+
+  div.signup-btn{
+      margin-left: -50px;
+  }
+
+  .login-btn{
+    width: 90px;
+    height: 40px;
+    border: 5px solid #cd5c5c;
+    padding: 5px 5px;
+    background:#fff8dc;
+    font-weight: bold;
+    margin-left: 100px;
+    margin-top: 20px;
+  }
+
+  .password{
+    margin-top: 10px;
+    border: 5px solid gold;
+    padding: 5px 5px;
+    background:#fff8dc;
+  }
+
+  .email{
+    margin-top: 10px;
+    border: 5px solid gold;
+    padding: 5px 5px;
+    background:#fff8dc;
+  }
+
+  div.login-info{
+    margin-left: 450px;
+  }
+
+  a.passwordup{
+    margin-top: 100x;
+  }
+
+  div.logout-meg{
+    margin-left: 400px;
+
+  }
+
+ 
+

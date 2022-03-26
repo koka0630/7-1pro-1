@@ -1,0 +1,41 @@
+header{
+    height: 65px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background-color:#fffacd;
+    font-family: 'TsukuARdGothic-Regular'
+  }
+
+  .menu-list {
+    height: 65px;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    background-color: rgba(0, 0, 0, 0);
+    transition: all 0.5s;
+  }
+
+.menu_left{
+  margin-left: 100px;
+  margin-bottom: 20px;
+
+}
+
+  .menu-right {
+    height: 50px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 600px;
+  }
+
+  div.username-btn{
+    margin-right: 15px;
+  }
+
+  div.toukouitirann-btn{
+    margin-right: 15px;
+  }

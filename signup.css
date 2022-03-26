@@ -1,0 +1,129 @@
+img.signup-img {
+    width: 300px;
+    height: 300px;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+      }
+      
+      body {
+        font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ",
+          Meiryo, sans-serif;
+      
+      }
+
+section{
+        margin: 0 auto;
+        width : 700px;
+      }
+      
+
+  img.tya-shuu-img1{
+      margin-top: 50px;
+    width: 70px;
+    height: 70px;
+  }
+
+ img.tya-shuu-img2{
+margin-top: 50px;
+    width: 70px;
+    height: 70px;
+ }
+
+
+ .username{
+    margin-top: 10px;
+    border: 5px solid gold;
+    padding: 5px 5px;
+    background:#fff8dc;
+  }
+
+  .email{
+    margin-top: 10px;
+    border: 5px solid gold;
+    padding: 5px 5px;
+    background:#fff8dc;
+  }
+
+  .password{
+    margin-left: 41px;
+    margin-top: 10px;
+    border: 5px solid gold;
+    padding: 5px 5px;
+    background:#fff8dc;
+  }
+
+  .favoriteramen{
+    margin-top: 10px;
+    border: 5px solid gold;
+    padding: 5px 5px;
+    background:#fff8dc;
+  }
+
+  .exercisegoal{
+    margin-top: 10px;
+    border: 5px solid gold;
+    padding: 5px 5px;
+    background:#fff8dc;
+  }
+
+
+  .favorite-ramen{
+    margin-top: 10px;
+    border: 5px solid gold;
+    padding: 5px 5px;
+    background:#fff8dc;
+  }
+
+  .exercise-goal{
+    margin-top: 10px;
+    border: 5px solid gold;
+    padding: 5px 5px;
+    background:#fff8dc;
+  }
+
+  .sign-btn{
+    width: 90px;
+    height: 40px;
+    border: 5px solid #cd5c5c;
+    background:#fff8dc;
+    font-weight: bold;
+    margin-top: 5px;
+    font-family: 'TsukuARdGothic-Regular'
+  }
+
+  #signup{
+    margin-left: 80px;
+    font-family: 'TsukuARdGothic-Regular'
+   
+  }
+
+  section{
+    margin: 0 auto;
+    width : 700px;
+    font-family: 'TsukuARdGothic-Regular'
+
+  }
+
+  h2{
+    margin-left: 150px;
+    color: #fa8072;
+    font-family: 'TsukuARdGothic-Regular'
+    
+  }
+
+  form.ramenramen{
+    font-family: 'TsukuARdGothic-Regular'
+  }
+
+  div.hensyuu{
+    margin-left: 300px;
+    margin-top: 30px;
+  }
+
+  div#signup{
+    margin-top: 50px;
+  }
+ 
