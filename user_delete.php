@@ -39,7 +39,10 @@ $stmt->execute();
 <div class="bg"></div>
 <div class="bg bg2"></div>
 <div class="bg bg3"></div>
+
+<div class="sakuzyo">
     <h2>アカウントを削除しました</h2>
+<div>
 
     
     

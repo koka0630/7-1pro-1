@@ -89,7 +89,7 @@ $mail->Subject = mb_encode_mimeheader(
 
 // メール本文
 $tmp_key=md5(uniqid(rand(),true));
-$SERVER_URL="localhost:8888";
+$SERVER_URL="localhost";
 $reset_password_url = "https://$SERVER_URL/reset_password_form.php?tmp_key=$tmp_key";
 $mail->Body = mb_convert_encoding(
     "パスワードの再設定用url: $reset_password_url"

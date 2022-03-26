@@ -22,15 +22,20 @@ $p_id = ''; //投稿ID
 $dbPostData = ''; //投稿内容
 $dbPostGoodNum = ''; //いいねの数
 
+
 // get送信がある場合
 if(!empty($_GET['p_id'])){
-    // 投稿IDのGETパラメータを取得
-    $p_id = $_GET['p_id'];
-    // DBから投稿データを取得
-    $dbPostData = getPostData($p_id);
-    // DBからいいねの数を取得
-    $dbPostGoodNum = count(getGood($p_id));
+  // 投稿IDのGETパラメータを取得
+  $p_id = $_GET['p_id'];
+  // DBから投稿データを取得
+  $dbPostData = getPostData($p_id);
+  
+  // DBからいいねの数を取得
+  $dbPostGoodNum = count(getGood($p_id));
 }
+echo json_encode($_GET);
+echo json_encode($dbPostData);
+
 ?>
 
 <!DOCTYPE html>
