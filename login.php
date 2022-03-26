@@ -53,6 +53,9 @@ if(!$password =  filter_input(INPUT_POST, 'password')){
   <?php
     include("header/header2.php");
   ?>
+  <div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
 <div class="login-info">
 <h2>ログイン完了</h2>
 <p>ログインしました</p>

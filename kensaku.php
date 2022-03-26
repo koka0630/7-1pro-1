@@ -45,6 +45,9 @@ $result = $sth->fetchAll();
     include("header/header2.php");
   ?>
 <body>
+<div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
     <div class="kensakukekka">
     <h2>検索結果</h2>
 <?php foreach($result as $row): ?>

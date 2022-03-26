@@ -4,7 +4,10 @@ header{
     display: flex;
     align-items: center;
     background-color:#fffacd;
-    font-family: 'TsukuARdGothic-Regular'
+    background-size: 500px;
+    font-family: 'TsukuARdGothic-Regular';
+    margin-bottom: 1px;
+    
   }
 
 

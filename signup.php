@@ -36,7 +36,9 @@ unset($_SESSION['login_err']);
   <?php
     include("header/header.php");
   ?>
-
+<div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
 <!-- ====== 画像 ======= -->
 <section>
   <h2>新規登録</h2>

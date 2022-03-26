@@ -54,7 +54,9 @@ $created_at= $result['created_at'];
   <?php
     include("header/header.php");
   ?>
-
+<div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
 
 
  <?php if (isset($login_err)) : ?>
@@ -67,14 +69,9 @@ $created_at= $result['created_at'];
     <label for="username">ユーザーネーム:</label>
     <input type="text" name="username" id="username" class="username" value="<?php echo $name?>">
     <br>
-    <label for="email">メールアドレス:</label>
-    <input type="email" name="email" id="email" class="email" value="<?php echo $email?>" >
-    <br>
-    <label for="password">パスワード:</label>
-    <input type="password" name="password" id="password" class="password"value="<?php echo $password?>" >
-    <br>
     <label for="favoriteramen">好きならーめん:</label>
     <input type="text" name="favoriteramen" id="favoriteramen" class="favoriteramen" value="<?php echo $favoriteramen?>">
+    <br>
     <label for="exercisegoal">運動目標:</label>
     <input type="text" name="exercisegoal" id="exercisegoal" class="exercisegoal" value="<?php echo $exercise_goal?>" >
       
@@ -85,4 +82,8 @@ $created_at= $result['created_at'];
 </form>
  </div>
 </body>
+ <!-- ====== フッター ======= -->
+ <?php
+   include("footer/footer.php");
+  ?>
 </html>

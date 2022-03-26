@@ -49,5 +49,36 @@ if(!$email =  filter_input(INPUT_POST, 'email')){
  userUpdate($users);
 
 ?>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="header/header2.css">
+    <link rel="stylesheet" href="footer/footer.css">
+   <title>Document</title>
+</head>
 
-<a href="mypage.php">マイページへ</a>
+<!-- ====== ヘッダー ======= -->
+<?php
+    include("header/header2.php");
+  ?>
+<body>
+<div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
+   <div class="edit-msg">
+   <h2>アカウントを編集しました</h2>
+   <br>
+<a href="mypage.php" class="mypage-btn">マイページへ</a>
+   </div>
+</body>
+<!-- ====== フッター ======= -->
+<?php
+   include("footer/footer.php");
+  ?>
+
+</html>
+

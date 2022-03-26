@@ -53,6 +53,9 @@ if($result){
     <title>パスワード再設定メール送信</title>
 </head>
 <body>
+<div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
    <h2>メール送信が完了しました</h2>
    パスワード再設定用のURLをメールアドレスに送信しました。<br>
    

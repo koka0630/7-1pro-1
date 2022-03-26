@@ -37,7 +37,12 @@ $stmt->execute();
     include("header/header2.php");
   ?>
 <body>
+<div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
+<div class="ramendelete">
     <h2>らーめんの削除が完了しました</h2>
+</div>
     
 </body>
  <!-- ====== フッター ======= -->

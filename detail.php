@@ -41,6 +41,9 @@ if(!$result){
     include("header/header2.php");
   ?>
 <body>
+<div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
     <div class="ramen-syousai">
     <h2>らーめん詳細</h2>
     <p>店舗名：<?php echo $result['storename']?> </p>

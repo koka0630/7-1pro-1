@@ -19,7 +19,9 @@
 
 <section>
 <body>
- 
+<div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
 <div class="tuika">
   <h3>らーめんの追加</h3>
   <form enctype="multipart/form-data" action=ramen_create.php method="POST">

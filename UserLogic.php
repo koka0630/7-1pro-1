@@ -180,7 +180,7 @@ function getselectramen(){
 function userUpdate($users){
 
 $sql =  'UPDATE users SET
-   name = :name, mail = :mail, password = :password, favorite_ramen = :favorite_ramen, exercise_goal = :exercise_goal
+   name = :name, favorite_ramen = :favorite_ramen, exercise_goal = :exercise_goal
 WHERE
    id = :id';
 
@@ -190,14 +190,14 @@ $dbh->beginTransaction();
 try{
 $stmt = $dbh->prepare($sql);
 $stmt->bindValue(':name',$users['username'], PDO::PARAM_STR);
-$stmt->bindValue(':mail',$users['email'], PDO::PARAM_STR);
-$stmt->bindValue(':password',password_hash($users['password'],PASSWORD_DEFAULT), PDO::PARAM_STR);
+//$stmt->bindValue(':mail',$users['email'], PDO::PARAM_STR);
+//$stmt->bindValue(':password',password_hash($users['password'],PASSWORD_DEFAULT), PDO::PARAM_STR);
 $stmt->bindValue(':favorite_ramen',$users['favoriteramen'], PDO::PARAM_STR);
 $stmt->bindValue(':exercise_goal',$users['exercisegoal'], PDO::PARAM_STR);
 $stmt->bindValue(':id',$users['id'], PDO::PARAM_INT);
 $stmt->execute();
 $dbh->commit();
-echo 'アカウントを編集しました';
+//echo 'アカウントを編集しました';
 }catch(PDOException $e){
 $dbh->rollBack();
 exit($e);

@@ -80,8 +80,8 @@ if (count($err_msgs) === 0){
  //ファイルがあるかどうか？
  if(is_uploaded_file($tmp_path)){
      if(move_uploaded_file($tmp_path, $save_path)){
-        echo $filename . 'をアップしました';
-        echo '<br>';
+        //echo $filename . 'をアップしました';
+        //echo '<br>';
         //DBに保存（ファイル名、ファイルパス）
        
      }else{
@@ -121,7 +121,7 @@ try{
     $stmt->bindValue(10,$user_id, PDO::PARAM_INT);
     $stmt->execute();
     $dbh->commit();
-    echo 'らーめんを追加しました';
+    //echo 'らーめんを追加しました';
 }catch(PDOException $e){
     $dbh->rollBack();
 exit($e);
@@ -135,11 +135,29 @@ exit($e);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mypage.css">
+    <link rel="stylesheet" href="header/header2.css">
+    <link rel="stylesheet" href="footer/footer.css">
     <title>らーめん追加完了</title>
 
 
 </head>
+<!-- ====== ヘッダー ======= -->
+<?php
+    include("header/header2.php");
+  ?>
 <body>
+<div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
+<div class="tuikatuika">
+<h2>ラーメンを追加しました</h2>
     <a href="mypage.php">マイページへ</a>
+</div>
 </body>
+<!-- ====== フッター ======= -->
+<?php
+   include("footer/footer.php");
+  ?>
+
 </html>

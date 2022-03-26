@@ -41,6 +41,9 @@ $my_ramens = getMyRamen($_SESSION['login_user']['id']);
 <body>
  
 <section>
+<div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
   <div class="infomation">
    <h2>アカウント情報</h2>
    <p>ログインユーザー:<?php echo h($login_user['name']) ?></p>

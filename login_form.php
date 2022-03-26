@@ -39,6 +39,9 @@ session_destroy();
   <?php
     include("header/header.php");
   ?>
+  <div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
 <section>
 <!-- ====== 画像 ======= -->
 <div id="login-img">

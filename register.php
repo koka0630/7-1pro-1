@@ -62,18 +62,23 @@ if(!$email =  filter_input(INPUT_POST, 'email')){
     include("header/header.php");
   ?>
 <body>
+<div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
+
     <?php if (count($err) > 0):?>
     <?php foreach($err as $e) :?>
     <p><?php echo $e ?></p>
     <?php endforeach ?>
 
     <?php else : ?>
+      <div class="touroku-info">
     <p>ユーザー登録が完了しました</p>
 
     <?php endif ?>
 <a href="./signup.php">戻る</a>   
 <a href="./login_form.php">ログイン画面へ</a>
-    
+    </div>
 </body>
  <!-- ====== フッター ======= -->
 <?php

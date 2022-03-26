@@ -80,8 +80,8 @@ if (count($err_msgs) === 0){
  //ファイルがあるかどうか？
  if(is_uploaded_file($tmp_path)){
      if(move_uploaded_file($tmp_path, $save_path)){
-        echo $filename . 'をアップしました';
-        echo '<br>';
+        //echo $filename . 'をアップしました';
+        //echo '<br>';
         //DBに保存（ファイル名、ファイルパス）
        
      }else{
@@ -121,7 +121,7 @@ $stmt->bindValue(':imagepath',$save_path, PDO::PARAM_STR);
 $stmt->bindValue(':id',$ramen['id'], PDO::PARAM_INT);
 $stmt->execute();
 $dbh->commit();
-echo 'らーめんを編集しました';
+//echo 'らーめんを編集しました';
 }catch(PDOException $e){
 $dbh->rollBack();
 exit($e);
@@ -135,9 +135,28 @@ exit($e);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="header/header2.css">
+    <link rel="stylesheet" href="footer/footer.css">
     <title>らーめん編集完了</title>
 </head>
+<!-- ====== ヘッダー ======= -->
+<?php
+    include("header/header2.php");
+  ?>
 <body>
-    <a href="mypage.php">マイページへ</a>
+
+<div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
+<div class="ramenhensyuu">
+<h2>らーめんを編集しました</h2>
+<br>
+    <a href="mypage.php" class="annnai">マイページへ</a>
+</div>
 </body>
+ <!-- ====== フッター ======= -->
+ <?php
+   include("footer/footer.php");
+  ?>
 </html>

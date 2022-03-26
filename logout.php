@@ -38,11 +38,16 @@ UserLogic::logout();
     include("header/header.php");
   ?>
 <body>
+<div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
 <div class="logout-meg">
+  <div class="logout-info">
    <h2>ログアウト完了</h2>
    <p>ログアウトしました</p>
 
    <a href="login_form.php">ログイン画面へ</a>
+</div>
    
 </div>
 

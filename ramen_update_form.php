@@ -59,6 +59,9 @@ $_FILES['uploadfile']['name'] = $imagepath;
   ?>
 <section>
 <body>
+<div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
  <div class="ramen-edit">
   <h3>らーめんの編集</h3>
   <form enctype="multipart/form-data" action=ramen_update.php method="POST">
