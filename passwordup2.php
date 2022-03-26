@@ -18,30 +18,9 @@ $stmt->bindValue(':mail', $passwordup, PDO::PARAM_STR);
 $stmt->execute();
 $result = $stmt->fetchAll();
 
-if($result){
-   foreach ($result as $row) {
-     echo $row['mail']." ";
-     echo $row['password']; 
-      }
+if(!$result){
+    echo "投稿がありません";
   }
-  else{
-      echo "投稿がありません";
-  }
-
-
-
-
-//メールアドレスがデータベースにあったらパスワードを作成する
-//$pass =  bin2hex(randam_bytes(5));
-
-//メール送信
-//$message = "パスワード変更しました。\r\n"
-          // . $pass . "\r\n";
-
-
-
-
-
 
 ?>
 <!DOCTYPE html>
