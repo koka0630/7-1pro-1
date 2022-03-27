@@ -128,5 +128,11 @@ section{
 
  div.sakuzyo{
    
-   margin-bottom: 400px;
+   margin-bottom: 500px;
+ }
+
+ h2.akaunntosakuzyo{
+   margin-top: 20px;
+   margin-left: 300px;
+   margin-bottom: 500px;
  }
