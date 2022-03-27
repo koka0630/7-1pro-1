@@ -1,5 +1,7 @@
 <?php
 
+require_once 'UserLogic.php';
+
 if(!isset($_SESSION)){
     session_start();
 }
