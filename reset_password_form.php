@@ -5,12 +5,13 @@ session_start();
 require_once 'dbconnect.php';
 $err = $_SESSION;
 
-$url_pass=parse_url($_SERVER['REQUEST_URI']);
+$url_pass = parse_url($_SERVER['REQUEST_URI']);
 
 $dbh= connect();
-$stmt =  $dbh->query("SELECT * FROM users WHERE tmp_key = '" . $url_pass . "'");
+$stmt =  $dbh->query("SELECT * FROM users WHERE tmp_key = '" . (int)$url_pass . "'");
 $current_user =  $stmt->fetchall(PDO::FETCH_ASSOC);
 $dbh =  null;
+
 
 // if (!$current_user){
 //   throw new Exception('無効なurlです');
@@ -57,7 +58,7 @@ $dbh =  null;
             <p><?php echo $err['password']; ?></p>
             <?php endif; ?>
         <br>
-        <button type="submit" class="reset_password-btn">submit</button>
+        <button type="submit" class="reset_password-btn">送信</button>
 </form>
 
 </section>

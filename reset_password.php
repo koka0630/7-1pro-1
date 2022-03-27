@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once 'dbconnect.php';
 
 
 // エラーメッセージ 
@@ -21,11 +22,11 @@ if(count($err) > 0){
  }
 
 $dbh= connect();
-$stmt =  $dbh->query("UPDATE users SET password = '" . $password . "' WHERE mail = '" . $email . "'");
-$res =  $stmt->fetchall(PDO::FETCH_ASSOC);
+$stmt =  $dbh->query("UPDATE users SET password = '" . password_hash($password,PASSWORD_DEFAULT) . "' WHERE mail = '" . $email . "'");
+//$res =  $stmt->fetchall(PDO::FETCH_ASSOC);
 $dbh =  null;
 
-if (!$res){
+if (!$stmt){
   throw new Exception('無効なurlです');
 }
 

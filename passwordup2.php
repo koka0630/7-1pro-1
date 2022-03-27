@@ -46,7 +46,7 @@ $mail->Encoding = "7bit";
 $mail->IsSMTP();
 
 // デバッグ
-$mail->SMTPDebug = 2;
+// $mail->SMTPDebug = 2;
 
 // SMTPAuthを利用する
 $mail->SMTPAuth = true;
@@ -106,7 +106,7 @@ $stmt->bindValue(':tmp_key', $tmp_key, PDO::PARAM_STR);
 $stmt->bindValue(':mail', $passwordup, PDO::PARAM_STR);
 
 $stmt->execute();
-$result = $stmt->fetchAll();
+//$result = $stmt->fetchAll();
 
 
 ?>
@@ -115,17 +115,30 @@ $result = $stmt->fetchAll();
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="header/header.css">
+    <link rel="stylesheet" href="footer/footer.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>パスワード再設定メール送信</title>
 </head>
+  <!-- ====== ヘッダー ======= -->
+  <?php
+    include("header/header.php");
+  ?>
 <body>
 <div class="bg"></div>
 <div class="bg bg2"></div>
 <div class="bg bg3"></div>
+<div class="mailsousin">
    <h2>メール送信が完了しました</h2>
-   パスワード再設定用のURLをメールアドレスに送信しました。<br>
+   <br>
+   <a>パスワード再設定用のURLをメールアドレスに送信しました。</a>
+       <br>
    
    <a href="login.php" >ログイン画面へ</a>
-    
+</div>
 </body>
+<?php
+   include("footer/footer.php");
+  ?>
 </html>
