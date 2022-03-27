@@ -19,22 +19,25 @@ function debug($str){
 		error_log('デバッグ：'.$str);
 	}
 }
-/*-------------------------------
-	セッション準備・セッション有効期限を延ばす
--------------------------------*/
-// セッションファイルの置き場を変更(30日は削除されない デフォルト有効期限は24分)
-session_save_path("/var/tmp/");
-// ガーベージコレクションが削除するセッションの有効期限を設定
-ini_set('session.gc_maxlifetime', 60*60*24*30);
-// ブラウザを閉じても削除されないようにクッキー自体の有効期限を延ばす
-ini_set('session.cookie_lifetime', 60*60*24*30);
-// セッション使用
-session_start();
-// セッションIDを新しく発行(なりすまし対策)
-session_regenerate_id();
-/*-------------------------------
-	画面表示処理開始ログ吐き出し関数
--------------------------------*/
+if(!isset($_SESSION)){
+  /*-------------------------------
+	  セッション準備・セッション有効期限を延ばす
+  -------------------------------*/
+  // セッションファイルの置き場を変更(30日は削除されない デフォルト有効期限は24分)
+  session_save_path("/var/tmp/");
+  // ガーベージコレクションが削除するセッションの有効期限を設定
+  ini_set('session.gc_maxlifetime', 60*60*24*30);
+  // ブラウザを閉じても削除されないようにクッキー自体の有効期限を延ばす
+  ini_set('session.cookie_lifetime', 60*60*24*30);
+  // セッション使用
+  session_start();
+  // セッションIDを新しく発行(なりすまし対策)
+  session_regenerate_id();
+  /*-------------------------------
+	  画面表示処理開始ログ吐き出し関数
+  -------------------------------*/
+}
+
 function debugLogStart(){
 	debug('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始');
 	debug('セッションID：'.session_id());
@@ -172,7 +175,7 @@ function getErrMsg($key){
 // DB接続関数
 function dbConnect(){
 	// DBへの接続準備
-	$dsn = 'mysql:dbname=PostOnceADay;host=localhost;charset=utf8';
+	$dsn = 'mysql:dbname=ramen site;host=localhost;charset=utf8';
 	$user = 'root';
 	$password = 'root';
 	$options = array(
@@ -228,7 +231,7 @@ function getPost($u_id, $p_id){
 
 	try{
 		$dbh = dbConnect();
-		$sql = 'SELECT * FROM post WHERE user_id = :u_id AND id = :p_id AND delete_flg = 0';
+		$sql = 'SELECT * FROM ramens WHERE user_id = :u_id AND id = :p_id AND delete_flg = 0';
 		$data = array(':u_id' => $u_id, ':p_id' => $p_id);
 
 		// クエリ実行
@@ -271,7 +274,7 @@ function getPostData($p_id){
 	debug('投稿ID：'.$p_id);
 	try{
 		$dbh = dbConnect();
-		$sql = 'SELECT * FROM post WHERE id = :p_id AND delete_flg = 0'; 
+		$sql = 'SELECT * FROM ramens WHERE id = :p_id AND delete_flg = 0'; 
 		$data = array(':p_id' => $p_id);
 		// クエリ実行
 		$stmt = queryPost($dbh, $sql, $data);
@@ -305,6 +308,7 @@ function getComment($p_id){
 }
 function getGood($p_id){
 	debug(' いいねを取得します');
+	debug('投稿ID：'.$p_id);
 	try {
 		$dbh = dbConnect();
 		$sql = 'SELECT * FROM good WHERE post_id = :p_id';
