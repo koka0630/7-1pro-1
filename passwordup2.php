@@ -55,12 +55,12 @@ $mail->SMTPAuth = true;
 $mail->Host = 'smtp.gmail.com';
 
 // ユーザー名
-$sender_email = 'koyamatest42@gmail.com';//getenv('SENDER_EMAIL');
-$mail->Username = 'koyamatest42@gmail.com';//'koyamatest42@gmail.com';
+$sender_email =  getenv('SENDER_EMAIL');
+$mail->Username = $sender_email;
 
 // パスワード
-$password = 'thozgcfhsdtihsni';//getenv('SENDER_PASSWORD');
-$mail->Password = 'thozgcfhsdtihsni';//'thozgcfhsdtihsni';
+$sender_password = getenv('SENDER_PASSWORD'); 
+$mail->Password = $sender_password;
 
 // ポート
 $mail->Port = 587;
@@ -69,7 +69,7 @@ $mail->Port = 587;
 $mimeheader_encoding = 'JIS';
 
 // 送信者アドレス
-$mail->From = $sender_email;
+$mail->From = getenv('SENDER_EMAIL');
 
 // 送信者名
 $mail->FromName = mb_encode_mimeheader(
