@@ -73,7 +73,7 @@ $mail->From = $sender_email;
 
 // 送信者名
 $mail->FromName = mb_encode_mimeheader(
-    'ramen-man'
+    'ラーメンまん'
     , $mimeheader_encoding
 );
 
@@ -90,7 +90,7 @@ $mail->Subject = mb_encode_mimeheader(
 // メール本文
 $tmp_key=md5(uniqid(rand(),true));
 $SERVER_URL="localhost";
-$reset_password_url = "https://$SERVER_URL/reset_password_form.php?tmp_key=$tmp_key";
+$reset_password_url = "http://$SERVER_URL/reset_password_form.php?tmp_key=$tmp_key";
 $mail->Body = mb_convert_encoding(
     "パスワードの再設定用url: $reset_password_url"
     , $mimeheader_encoding

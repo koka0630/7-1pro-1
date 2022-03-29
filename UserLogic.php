@@ -103,6 +103,35 @@ class UserLogic
         } 
 
     }
+     /**
+     * tmp_keyからユーザーを取得
+     * @param string $tmp_key
+     * @return array|bool $user|false
+     */
+    public static function getUserByTmpKey($tmp_key)
+    {
+        //SQLの準備
+        //SQLの実行
+        //SQLの結果を返す
+        $sql =  'SELECT * FROM users WHERE tmp_key = ?';
+
+
+        //tmp_keyを配列に入れる
+        $arr = [];
+        $arr[] = $tmp_key;
+
+
+        try{
+            $stmt = connect()->prepare($sql);
+            $stmt->execute($arr);
+            //SQLの結果を返す
+            $user =  $stmt->fetch();
+            return $user;
+        }catch(\Exception $e){
+        return false;
+        } 
+
+    }
 
     
     /**
