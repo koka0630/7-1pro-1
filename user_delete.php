@@ -28,24 +28,21 @@ $stmt->execute();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>アカウント削除完了画面</title>
 </head>
-
-
-<body>
-
 <!-- ====== ヘッダー ======= -->
 <?php
     include("header/header.php");
   ?>
+
+<body>
+
+
 <div class="bg"></div>
 <div class="bg bg2"></div>
 <div class="bg bg3"></div>
 
 <div class="sakuzyo">
-    <h2>アカウントを削除しました</h2>
+    <h2 class="akaunntosakuzyo">アカウントを削除しました</h2>
 <div>
-
-    
-    
 </body>
    <!-- ====== フッター ======= -->
    <?php
